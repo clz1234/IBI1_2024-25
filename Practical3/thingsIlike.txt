@@ -4,16 +4,15 @@ I like orange
 I like grape
 I like strawberry
 I like watermelon
-<<<<<<< HEAD
+master different hobbies
 I like cantaloupe
 I like mango
 I like pear
 I like cherry very much
-=======
+branch different hobbies
 I don't like lemon
 I like pineapple
 I like kiwi fruit
 I like plum
 I like mangosteen
 I like blueberry
->>>>>>> Alex
