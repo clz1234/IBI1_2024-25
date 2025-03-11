@@ -12,9 +12,33 @@ f = d+e
 # The total length of time for the car-based commute
 print(c , f)
 if c > f:
-    print("car-based commute faster than bus-based")
+    print("Bus-based commute is longer, car-based commute faster than bus-based")
 elif c < f:
-    print("bus-based commute faster than car-based")
+    print("Car-based commute is longer, bus-based commute faster than car-based")
 else:
     print("car-based commute is same as bus-based")
     # Car-based commute is longer,bus-based commute is quicker
+
+X = True
+Y = False
+W = X and Y
+print(W)
+X = True
+Y = True
+W = X and Y
+print(W)
+X = False
+Y = False
+W = X and Y
+print(W)
+X = False
+Y = True
+W = X and Y
+print(W)
+# The truth table for W
+# | X | Y | W（X and Y） |
+# |----|----|----|
+# | True | True | True |
+# | True | False | False |
+# | False | True | False |
+# | False | False | False |
