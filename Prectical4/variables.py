@@ -17,3 +17,4 @@ elif c < f:
     print("bus-based commute faster than car-based")
 else:
     print("car-based commute is same as bus-based")
+    # Car-based commute is longer,bus-based commute is quicker
