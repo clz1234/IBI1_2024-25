@@ -23,18 +23,23 @@ X = True
 Y = False
 W = X and Y
 print(W)
+# The result is False
 X = True
 Y = True
 W = X and Y
 print(W)
+# The result is True
 X = False
 Y = False
 W = X and Y
 print(W)
+# The result is False
 X = False
 Y = True
 W = X and Y
 print(W)
+# The result is False
+
 # The truth table for W
 # | X | Y | W（X and Y） |
 # |----|----|----|
