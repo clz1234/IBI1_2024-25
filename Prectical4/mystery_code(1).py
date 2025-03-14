@@ -10,12 +10,22 @@ from random import randint
 # e.g. ceil(4.2)=5
 from math import ceil
 
+# Define a varible called progress
 progress=0
+
+# Creat a while loop
+# If the progress is largeer than or equal to 0
+# The value of progress will add 1 
 while progress>=0:
 	progress+=1
+	# Creat a randint first_n, range between 1 and 6
 	first_n = randint(1,6)
+	# Creat a randint second_n, range between 1 and 6
 	second_n = randint(1,6)
+	# Judge whether first_n is equal to second_n
 	if first_n == second_n:
+		#if they are equal, print progress
 		print(progress)
+		#jump out of the loop
 		break
 
