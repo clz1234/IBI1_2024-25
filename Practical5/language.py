@@ -1,36 +1,40 @@
+# create an dictionary. key is "language", value is "users"
 language_users = { "JavaScript": 62.3,
                    "HTML": 52.9,
                    "Python":51,
                    "SQL": 51,
                    "TypeScript": 38.5 }
-# Create an dictionary. key is "language", value is "users"
+# print this dictionary. 
 print(language_users)
-# Print this dictionary. 
+# import the matplotlib.pyplot module and rename it plt
 import matplotlib.pyplot as plt
-# Import the matplotlib.pyplot module and rename it plt
+# create a new graphics window. The graph is 8 inches wide and 8 inches high
 plt.figure(figsize = (8,8))
-# Create a new graphics window. The parameter specifies the size of the graph in inches, where the graph is 8 inches wide and 8 inches high
+# create a bar chart with the key as x axis, the value as y axis, the fill color red, and the column width 0.6
 plt.bar(language_users.keys(), language_users.values(), color = 'red', width = 0.6)
-# Create a bar chart with the keyword x axis, the value y axis, the fill color red, and the column width 0.6
+# sets the title of the graphic, font size of 18 for the title.
 plt.title("Programming languages among developers worldwide as of 2024", fontsize = 18)
-# Sets the title of the graphic, specifying a font size of 18 for the title.
+# set the display range of the Y-axis
 plt.ylim(0,80)
-# Set the display range of the Y-axis
+# set the Y-axis label, font size of 14 for the Y-axis label.
 plt.ylabel("Usage Percentage ", fontsize = 14)
-# Set the Y-axis label, specifying a font size of 14 for the Y-axis label.
+# set the X-axis label, font size of 14 for the X-axis label.
 plt.xlabel("Programming Languages", fontsize = 14)
-# Set the X-axis label, specifying a font size of 14 for the X-axis label.
+# set the scale of the Y-axis
 plt.yticks([20, 40, 60, 80])
-# Set the scale of the Y-axis
+# for each key-value pair in language_users, add a text annotation at the coordinates (key, value)
+for key, value in language_users.items():
+    # annotate the content as the result of converting value to a string
+    plt.text(key,value, str(value))
+# show the bar chart
 plt.show()
-# Show the bar chart
 
+# user input programming language
 input_language = input("input the programming language")
-# User input programming language
+# check that the language you entered is in the dictionary
 if input_language in language_users:
-# Check that the language you entered is in the dictionary
+#if in output "The	percentage of input_language is {language_users[input_language]}% ."
     print(f"The percentage of {input_language}is {language_users[input_language]}%")
-    # If in output "The	percentage of developers	who	use	one	language taken from	the	input list."
+# If not output "input_language is not in dictionary"
 else:
     print(f"{input_language} is not in the dictionary")
-    # If not output "input_language is not in dictionary"
