@@ -22,3 +22,4 @@ else:
     category = "obese"
 # output a sentence containing the user's BMI value and category, converts the number into a string
 result = f"BMI is {str(bmi)}，you are  {category}."
+print(result)
