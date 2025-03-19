@@ -32,4 +32,5 @@ plt.figure(figsize=(8, 8))
 plt.pie(zhejiang_neighbors, labels=labels_zhejiang, autopct='%1.1f%%', startangle=140)
 # set the figure title as "Population Distribution in Provinces Bordering Zhejiang", with a font size of 16
 plt.title("Population Distribution in Provinces Bordering Zhejiang", fontsize=16)
-# show the figure
+# show the figure 
+plt.show()
