@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 # create a new graphics window. The graph is 8 inches wide and 8 inches high
 plt.figure(figsize = (8,8))
-# create a bar chart with the key as x axis, the value as y axis, the fill color red, and the column width 0.6
-plt.bar(language_users.keys(), language_users.values(), color = 'red', width = 0.6)
+# create a bar chart with the key as x axis, the value as y axis, and the column width 0.6
+plt.bar(language_users.keys(), language_users.values(), width = 0.6)
 # sets the title of the graphic, font size of 18 for the title.
 plt.title("Programming languages among developers worldwide as of 2024", fontsize = 18)
 # set the Y-axis label, font size of 14 for the Y-axis label.
