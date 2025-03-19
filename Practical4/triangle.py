@@ -10,4 +10,4 @@ for n in range(1, 11):
 # in each loop, count the number of triangles for the current number
     y += n
 # print out the number of triangles
-    print(n,y
+    print(n,y)
