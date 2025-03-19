@@ -37,7 +37,7 @@ print(W)
 X = False
 Y = True
 W = X and Y
-print(W
+print(W)
 # the result is False
 
 # the truth table for W
