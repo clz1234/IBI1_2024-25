@@ -8,20 +8,19 @@ language_users = { "JavaScript": 62.3,
 print(language_users)
 # import the matplotlib.pyplot module and rename it plt
 import matplotlib.pyplot as plt
+import numpy as np
 # create a new graphics window. The graph is 8 inches wide and 8 inches high
 plt.figure(figsize = (8,8))
 # create a bar chart with the key as x axis, the value as y axis, the fill color red, and the column width 0.6
 plt.bar(language_users.keys(), language_users.values(), color = 'red', width = 0.6)
 # sets the title of the graphic, font size of 18 for the title.
 plt.title("Programming languages among developers worldwide as of 2024", fontsize = 18)
-# set the display range of the Y-axis
-plt.ylim(0,80)
 # set the Y-axis label, font size of 14 for the Y-axis label.
 plt.ylabel("Usage Percentage ", fontsize = 14)
 # set the X-axis label, font size of 14 for the X-axis label.
 plt.xlabel("Programming Languages", fontsize = 14)
 # set the scale of the Y-axis
-plt.yticks([20, 40, 60, 80])
+plt.yticks(np.arange(0 , 81 , 10))
 # for each key-value pair in language_users, add a text annotation at the coordinates (key, value)
 for key, value in language_users.items():
     # annotate the content as the result of converting value to a string
