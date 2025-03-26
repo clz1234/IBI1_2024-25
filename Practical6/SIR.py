@@ -43,5 +43,5 @@ plt.ylabel('number of people')
 plt.title('SIR model')
 plt.legend()
 #save the plot
-plt.savefig("SIR_figure.png")
+plt.savefig("SIR_plot.png")
 plt.show()
