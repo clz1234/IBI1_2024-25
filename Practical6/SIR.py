@@ -42,6 +42,6 @@ plt.xlabel('time')
 plt.ylabel('number of people')
 plt.title('SIR model')
 plt.legend()
-plt.show()
 #save the plot
-plt.savefig("<SIR figure>", type="png")
+plt.savefig("SIR_figure.png")
+plt.show()
