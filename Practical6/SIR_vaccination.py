@@ -3,32 +3,35 @@ from matplotlib import cm
 #import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
-#as guide required, define the basic variables. And S for susceptible but healthy individuals, I for infected, R for recover, N for total,
-#beta for infection probability upon contact, gamma for recovery probability.
+#define the basic variables. N for total, beta for infection probability upon contact, gamma for recovery probability.
 N = 10000
 beta = 0.3
 gamma = 0.05
 #create arrays for each of my variables
 #add the array for vaccinated people
 vaccination_rates = [i / 10 for i in range(11)]  # set the rate for vaccination[0.0, 0.1, ..., 1.0]
-#becase vaccinated rate is change, so the susceptible people will change too
+#create plot and set size
+plt.figure(figsize=(6, 4))
+#traverse different probabilities
 for rate in vaccination_rates:
     I = 1
     R = 0
     V = int(N*rate)
-    S = N-V-I
+    S = N-V-I #becase vaccinated rate is change, so the susceptible people will change too
     S_list = [S]
     I_list = [1]
     R_list = [0]
      #for t in range(1000):
+     #if S>0and N-V!=0, there will some people can be infected
      #calculate the probability of infection
+     #else, prob = 0
      #randomly infected number S
      #randomly recovered number R
      #update number of S,I,R
      #add elements to arrays
     for t in range(1000):
-        if N-V != 0:
-            prob_infection = beta * (I / (N-V)) #the vaccinated people will never be infected
+        if S>0 and N-V != 0:
+            prob_infection = beta * (I / N) #the vaccinated people will never be infected
         else:
             prob_infection = 0
         if S > 0:
@@ -44,7 +47,6 @@ for rate in vaccination_rates:
         S_list.append(S)
         I_list.append(I)
         R_list.append(R)
-#plot my results, plot the numbers of susceptible, infected, and recovered people as a function of time.
     #presents images with different probabilities
     plt.plot(I_list, label=f'{rate * 100}% vaccination')
 #set x,ylabel and title
@@ -53,5 +55,5 @@ plt.ylabel('number of people')
 plt.title('SIR model with different vaccination rates')
 plt.legend()
 #save the plot
-plt.savefig("<SIR model with different vaccination figure>", type="png", figsize=(6, 4))
+plt.savefig("SIR model with different vaccination figure.png")
 plt.show()
