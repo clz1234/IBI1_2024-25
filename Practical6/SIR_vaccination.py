@@ -30,11 +30,11 @@ for rate in vaccination_rates:
      #update number of S,I,R
      #add elements to arrays
     for t in range(1000):
-        if S>0 and N-V != 0:
+        if S>0 and N>0:
             prob_infection = beta * (I / N) #the vaccinated people will never be infected
         else:
             prob_infection = 0
-        if S > 0:
+        if S>0 :
             num_infected = np.random.choice(range(2),int(S) , p=[1 - prob_infection, prob_infection])
             sum_new_infected = sum(num_infected)
             num_recovered = np.random.choice(range(2), I, p=[1 - gamma, gamma])
