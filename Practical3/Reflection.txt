@@ -1,4 +1,7 @@
- I think is too challenging, maybe because I was first time to use it
+ I think is challenging, maybe because I was first time to use it
+ I try to understand that how the master and branch work,
+ have a try about push my file to the github
  But everything goes well now
- And I didn't have other questions so far
- 
+ I didn't have other questions so far,
+ and had some understanding about git and github
+ I enjoy this process and will keep studying it
