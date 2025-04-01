@@ -1,3 +1,7 @@
+#enter the time spent on each section and get the total time
+#print the total time
+#compare the total time spent by the two methods and print the comparison result
+
 a = 15 
 # the walk to the bus stop is 15 mins
 b = 75
