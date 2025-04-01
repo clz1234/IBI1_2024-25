@@ -2,7 +2,8 @@
 #input the data of two areas
 #sort the input data
 #print the result after sorting
-#create pie figures for the two areas, set it size, title and label
+#create pie figures for the two areas, set it size, title and labels
+#show the figure
 
 # import the `matplotlib.pyplot` library and name it `plt`
 import matplotlib.pyplot as plt
