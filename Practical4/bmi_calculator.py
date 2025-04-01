@@ -1,8 +1,10 @@
-#       BMI
-#       What is their BMI, and from that, which of the three categories they can be placed into
-#             if more than 30: the person is obese
-#             if less than 18.5: the preson is underweight
-#             if in the intermediate range: the person is in normal weight
+#input their weight and height
+#calculate bmi
+#if more than 30: the person is obese
+#if less than 18.5: the preson is underweight
+#if in the intermediate range: the person is in normal weight
+#set a variable called result, output contains the user's BMI value and weight category
+#print the result
 
 # get the user's weight (in kg)
 w = float(input("the user's weighet in kg"))
