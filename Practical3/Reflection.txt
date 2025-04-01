@@ -4,4 +4,4 @@
  But everything goes well now
  I didn't have other questions so far,
  and had some understanding about git and github
- I enjoy this process and will keep studying it
+ I enjoy this process and will keep studying itg
