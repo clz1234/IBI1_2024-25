@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:Draw one number from each of the two samples of between 1 and 6, stop until the two samples draw the same number, and print the number of draws
+# Answer:throw two cubes with 1 to 6 written in the same order at the same time, until both cubes have the same number facing up, and record how many times you throw them
 
 # Import libraries
 # randint allows drawing a random number,
