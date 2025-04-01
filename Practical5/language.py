@@ -1,3 +1,12 @@
+#create a dictionary, input of each type of user and its proportion
+#print the dictionary
+#import library
+#creat a figure,set its size
+#let dictionary's key as its x axis, values as its y axis
+#set its x,ylabel, title
+#put all the data into a bar graph
+#show the figure
+
 # create an dictionary. key is "language", value is "users"
 language_users = { "JavaScript": 62.3,
                    "HTML": 52.9,
@@ -27,6 +36,11 @@ for key, value in language_users.items():
     plt.text(key,value, str(value))
 # show the bar chart
 plt.show()
+
+#let the user input the language
+#if input_language in language_users
+#print the percentage
+#else print it doesn't in the dictionary
 
 # user input programming language
 input_language = input("input the programming language")
