@@ -1,7 +1,7 @@
-#     triangular numbers
-#         How to calculated
-#            It can be calculated as the sum of the n numbers from 1 to n
-#            for n in range (1, 11)
+#triangular numbers
+#It can be calculated as the sum of the n numbers from 1 to n
+#for n in range (1, 11)
+#print each n and corresponding y
 
 # initialize a variable to store the sum of the sequence
 y = 0
