@@ -62,5 +62,4 @@ for idx, i in enumerate(plot_point):
     axes[idx].axis('off')
 #show the figure and save it 
 plt.tight_layout()
-plt.savefig('spatial_SIR(2D).png')
 plt.show()
