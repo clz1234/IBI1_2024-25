@@ -38,7 +38,9 @@ uk = dalys_data.loc[dalys_data.Entity=="United Kingdom", ["DALYs", "Year"]]
 #draw a line graph showing the changes of DALYs in UK over time
 plt.plot(uk.Year, uk.DALYs, 'b+')
 #adjust the X-axis to make the plot nicer
-plt.xticks(uk.Year,rotation=-90)
+plt.xticks(uk.Year,rotation=-45)
+plt.xlabel('Year')
+plt.ylabel('DALYs')
 plt.show()
 
 #extract the data of China and the United Kingdom
