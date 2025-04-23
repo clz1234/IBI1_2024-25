@@ -1,0 +1,9 @@
+How has the relationship between the DALYs in China and the UK changed over time?
+Are they becoming more similar, less similar?
+
+the question was addressed starting from line 44 
+
+At the beginning, there was a significant difference in DALYs between China and the United Kingdom. 
+As the Year increased, the gap between the two countries became smaller and smaller. During this process, the overall downward trend in China was greater than that in the UK. 
+However, as DALYs gradually declined, the trend also slowed down. By 2019, the gap in DALYs between the two countries was not significant. 
+Overall, the relationship between the DALYs in China and the UK became more similar
