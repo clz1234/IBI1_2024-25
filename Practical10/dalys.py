@@ -12,7 +12,7 @@ dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 frist_ten_Year=dalys_data.iloc[0:10,2]
 print(frist_ten_Year)# 1999 was the 10th year with DALYs datarecorded in Afghanistan
 
-#obtain the Boolean type sequence with the Year 1990
+#obtain the Boolean type sequence with the Year 1990.
 data_1990 = dalys_data['Year'] == 1990
 #Filter out Entity and DALYs
 dalys_1990 = dalys_data.loc[data_1990, [True,False,False,True]]
