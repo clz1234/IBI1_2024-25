@@ -1,0 +1,13 @@
+for task 1
+The length of the human SOD2 protein is 222 amino acids. According to Uniprot's information, it is located in the mitochondria
+
+for task 2
+The range of percentage identities in the reported online BLAST results is from 58.1% to 100.0%, and 100% matching indicates self-comparison with human SOD2.
+
+for task 3
+For human and mouse, the alignment score is 1097.0, the percentage of identical amino acids is 90.09%
+For human and random, the alignment score is -291.0, the percentage of identical amino acids is 4.05%
+For random and mouse, the alignment score is -293.0, the percentage of identical amino acids is 3.60%
+
+for task 4
+The human and mouse SOD2 proteins are closely related, because both the score and the percentage are the highest
