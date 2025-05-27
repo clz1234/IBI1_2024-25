@@ -9,8 +9,8 @@ os.chdir("/Users/cuilizi/Desktop/Lecture/IBI/IBI1/IBI1_2024-25/IBI1_2024-25/Prac
 dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 
 #display the third column (year) of the first 10 rows
-frist_ten_Year=dalys_data.iloc[0:10,2]
-print(frist_ten_Year)# 1999 was the 10th year with DALYs datarecorded in Afghanistan
+frist_ten_year=dalys_data.iloc[0:10,2]
+print(frist_ten_year)# 1999 was the 10th year with DALYs datarecorded in Afghanistan
 
 #obtain the Boolean type sequence with the Year 1990.
 data_1990 = dalys_data['Year'] == 1990
@@ -37,6 +37,7 @@ elif uk_mean.values[0] < france_mean.values[0]:
 uk = dalys_data.loc[dalys_data.Entity=="United Kingdom", ["DALYs", "Year"]]
 #draw a line graph showing the changes of DALYs in UK over time
 plt.plot(uk.Year, uk.DALYs, 'b+')
+plt.title('DALYs in the UK Over Time')
 #adjust the X-axis to make the plot nicer
 plt.xticks(uk.Year,rotation=-45)
 plt.xlabel('Year')
@@ -46,7 +47,6 @@ plt.show()
 #extract the data of China and the United Kingdom
 china = dalys_data.loc[dalys_data.Entity == "China", ["Year", "DALYs"]]
 uk = dalys_data.loc[dalys_data.Entity == "United Kingdom", ["Year", "DALYs"]]
-#draw a line graph showing the changes of DALYs in China over time
 plt.plot(china.Year, china.DALYs, label='China', marker='o')
 #draw a line graph showing the changes of DALYs in UK over time
 plt.plot(uk.Year, uk.DALYs, label='United Kingdom', marker='s')
