@@ -8,14 +8,17 @@
 
 #import library
 import re
+import sys
 #user input the splice donor/acceptor combinations
 user_input = input("input one of three possible splice donor/acceptor combinations (GTAG, GCAG,ATAC)")
+if user_input not in {'GTAG', 'GCAG', 'ATAC'}:
+    sys.exit("error：please input just (GTAG、GCAG、ATAC)")
 donor = user_input[:2]
 acceptor = user_input[2:]
 #the sequence in tata box
-tata_pattern = r'TATA[AT][AT][AT]'
+tata_pattern = r'TATA[AT]A[AT]'
 #open the file
-with open('/Users/cuilizi/Downloads/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r') as input_file:
+with open('/Users/cuilizi/Desktop/Lecture/IBI/IBI1/IBI1_2024-25/IBI1_2024-25/Practical7/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r') as input_file:
     #set blank variable for the gene in selecting
     sequence = ""
     gene_name = ""
@@ -27,11 +30,12 @@ with open('/Users/cuilizi/Downloads/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa
         if line.startswith('>'):
             if sequence:
                 #check if it in the tata box
-                tata_matches = re.search(tata_pattern, sequence)
+                tata_matches = re.findall(tata_pattern, sequence)
+                tata_count = len(tata_matches)
                 donor_index = sequence.find(donor)
                 acceptor_index = sequence.find(acceptor)
                 if tata_matches and donor_index != -1 and acceptor_index != -1 and donor_index < acceptor_index:
-                    output_sequences.append((gene_name, sequence))
+                    output_sequences.append((gene_name,tata_count,sequence))
             #get the gene name. In orginal file, the gene's name at the fourth part, separated by space, select the gene name
             gene_name = line.split(' ')[3].lstrip('gene:')
             #empty variable
@@ -41,13 +45,14 @@ with open('/Users/cuilizi/Downloads/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa
             sequence += line.strip()
     #deal with last data
     if sequence:
-        tata_matches = re.search(tata_pattern, sequence)
+        tata_matches = re.findall(tata_pattern, sequence)
         donor_index = sequence.find(donor)
         acceptor_index = sequence.find(acceptor)
         if tata_matches and donor_index != -1 and acceptor_index != -1 and donor_index < acceptor_index:
-            output_sequences.append((gene_name, sequence))
+            output_sequences.append((gene_name,tata_count,sequence))
 #name the file by using user's input, open the output file and write every loops' result in it
 output_filename = f'{user_input}_spliced_genes.fa'
 with open(output_filename, 'w') as output_file:
-    for name, seq in output_sequences:
-        output_file.write(f">{name}\n{seq}\n")
+    for name,count,seq in output_sequences:
+        output_file.write(f">{name}  TATA_count:{count}\n")
+        output_file.write(f"{seq}\n")
