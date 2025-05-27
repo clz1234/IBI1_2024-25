@@ -1,3 +1,9 @@
+'''
+import necessary libraries
+define basic information, set nesscary array
+For different vaccination rates, simulate the situation of the number of infections in 1,000 cycles
+set the figure
+'''
 #use nice colour scheme
 from matplotlib import cm
 #import necessary libraries
@@ -12,8 +18,10 @@ gamma = 0.05
 vaccination_rates = [i / 10 for i in range(11)]  # set the rate for vaccination[0.0, 0.1, ..., 1.0]
 #create plot and set size
 plt.figure(figsize=(6, 4))
-#traverse different probabilities
-for rate in vaccination_rates:
+num_rates = len(vaccination_rates)
+colors = cm.viridis(np.linspace(0, 1, len(vaccination_rates)))
+#traverse different probabilities, i let "I" is "infected", "R" is "recovered", "V" is "vaccinated", "S" is "susceptible"
+for i, rate in enumerate(vaccination_rates):
     I = 1
     R = 0
     V = int(N*rate)
@@ -48,7 +56,7 @@ for rate in vaccination_rates:
         I_list.append(I)
         R_list.append(R)
     #presents images with different probabilities
-    plt.plot(I_list, label=f'{rate * 100}% vaccination')
+    plt.plot(I_list, label=f'{rate * 100}% vaccination',color=colors[i])
 #set x,ylabel and title
 plt.xlabel('time')
 plt.ylabel('number of people')
