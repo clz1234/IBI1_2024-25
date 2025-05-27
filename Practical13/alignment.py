@@ -1,3 +1,11 @@
+'''
+import necessary library
+Library and matrix import: Load the matrix through biopython.
+The FASTA read logic skips the title line (starting with >) and merges the sequence content
+Consistency calculation: Compare amino acids bit by bit, calculate the same proportion and retain two decimal places
+Compare the score logic, verify that the sequence lengths are consistent (no blank alignment requirements), and use the BLOSUM62 matrix to accumulate the scores
+Output
+'''
 # import necessary library
 # import the BLOSUM62 matrix
 from Bio.Align import substitution_matrices
