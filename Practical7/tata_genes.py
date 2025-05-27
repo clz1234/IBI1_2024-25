@@ -12,7 +12,7 @@
 #import library
 import re
 #open the file
-with open('/Users/cuilizi/Downloads/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r') as input_file:
+with open('/Users/cuilizi/Desktop/Lecture/IBI/IBI1/IBI1_2024-25/IBI1_2024-25/Practical7/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r') as input_file:
     #set blank variable for the gene in selecting
     sequence = ""
     gene_name = ""
