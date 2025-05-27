@@ -1,3 +1,11 @@
+'''
+import necessary libraries
+define the basic information
+create arrays for each variables
+Simulate the recovery and infection of human beings for 1000 time and record the data
+Count the data of different probabilities into the graph
+'''
+
 #import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt

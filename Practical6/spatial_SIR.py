@@ -9,6 +9,7 @@ for each time step:
     for each infected, infect neighbors with probability β.
     recover infected person with probability γ.
 save plots at t=0,10,50,100.
+
 """
 
 #import necessary libraries
