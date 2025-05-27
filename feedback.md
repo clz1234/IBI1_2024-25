@@ -1,0 +1,2 @@
+In the feedback, I was informed that the content of "commit" was too simple and needed to be more detailed. So I corrected this and attempted to recommit those commits that were originally too simple
+I was only informed of this deficiency and made adjustments in the subsequent tasks
