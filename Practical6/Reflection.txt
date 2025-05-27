@@ -1,0 +1,14 @@
+for SIR.pyp
+i think is easy to understand and finish the work
+
+for SIR_vaccination.py
+i saw the guidance suggested use cm for nice color 
+but i did not konw how to use it, so when i check my code, i finding that i did not use it, but i import it 
+so i asked for help form network and used it successfully
+use cm.viridis to generate colors equal to the number of vaccination rates, ensuring that each vaccination rate corresponds to a unique color
+use enumerate to traverse the vaccination rate and match the colors in the color list through index i
+these are what i have newly learned
+
+for spatial_SIR.py
+I think dealing with random situations of marginal infections is interesting
+This idea of substituting an array for different people in a region is also something I have newly learned
