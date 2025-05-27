@@ -1,3 +1,12 @@
+'''
+Import the necessary libraries
+Use the os.chdir() function to switch the working directory to the path where the data file is located and read the data set
+Display the "Year" column (the third column) of the first 10 rows
+Filter the DALYs data of 1990 to create a Boolean sequence data_1990: Determine whether the "Year" column is equal to 1990
+Calculate the average DALYs of the United Kingdom and France, print the mean values of the two countries, compare their sizes, and output the results
+Draw a line graph of the DALYs in the UK over time
+Extract the columns of "Year" and "DALYs" for comparison and plotting
+'''
 #import the necessary libraries
 import os
 import pandas as pd
