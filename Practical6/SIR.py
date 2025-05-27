@@ -2,8 +2,10 @@
 import necessary libraries
 define the basic information
 create arrays for each variables
-Simulate the recovery and infection of human beings for 1000 time and record the data
-Count the data of different probabilities into the graph
+Calculate the infection probability
+Random sampling determines the number of new infections and recoveries
+Update the number of various groups of people
+Record the population data of three different situations and draw graphs
 '''
 
 #import necessary libraries
